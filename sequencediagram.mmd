@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant User as users
+    participant Host
+    participant Property as property
+    participant Booking
+    participant Review as review
+    participant Amenity as amenity
+
+    User->>Property: browse_properties()
+    User->>Property: check_availability()
+    User->>Booking: create(start_date, end_date, user_id, property_id)
+
+    Host->>Amenity: add amenity (property_id, name_string)
+
+    User->>Review: submit(user_id, property_id, comment)
