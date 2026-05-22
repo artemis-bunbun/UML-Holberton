@@ -1,0 +1,47 @@
+classDiagram
+    class property{
+    - title: String
+    - location: String
+    - host_id:
+    + check_availability()
+    }
+    
+    
+    class Host{
+        - name: str
+        - email: str
+        - user_id
+    }
+
+    class users {
+        -name: str
+        -email: str
+        - user_id
+        + browse_properties() 
+    }
+
+    class review {
+        - property_id
+        -comment: str
+        +submit()
+        -user_id
+        
+    }
+
+    
+    class Booking {
+        - property_id
+        -start_date: str
+        -end_date: str
+        - status: logement
+        - user_id
+        + approuve()
+        + reject()
+
+    }   
+    
+    class amenity{
+        - property_id
+        - name_string
+        + description()
+    }
